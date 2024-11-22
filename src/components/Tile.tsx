@@ -33,12 +33,12 @@ export default function Tile({ value, position, isNew, isMerging }: TileProps) {
   
   return (
     <div
-      className={`absolute flex items-center justify-center w-16 h-16 rounded-md font-bold transition-all duration-100
+      className={`absolute flex items-center justify-center w-[72px] h-[72px] rounded-md font-bold transition-all duration-100
         ${color} ${getFontSize(value)}
         ${isNew ? 'animate-pop-in' : ''}
         ${isMerging ? 'animate-merge' : ''}`}
       style={{
-        transform: `translate(${x * (64 + 16) + 16}px, ${y * (64 + 16) + 16}px)`
+        transform: `translate(${x * 88 + 16}px, ${y * 88 + 16}px)`
       }}
     >
       {value}
